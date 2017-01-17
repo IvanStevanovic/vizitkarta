@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+<script src="lib/html2canvas.min.js"></script>
+<script src="lib/jspdf.min.js"></script>
+<script src="scripts/script.js"></script>
+<script src="scripts/ckeditor/ckeditor.js"></script>
+</head>
+<body>
+<form  method="POST">
+  <span>Unesite Tekst preko editora:</span>
+  <textarea class="ckeditor" name="text1" id="text1" cols="1" rows="1"></textarea>
+  <span>Unesite Slogan / Opis preko editora:</span>
+  <textarea class="ckeditor" name="slogan" id="slogan1"></textarea>
+  <span>Unesite Ime i prezime preko editora:</span>
+  <textarea class="ckeditor" name="ime" id="ime1"></textarea>
+  <span>Unesite Titula / Zvanje preko editora:</span>
+  <textarea class="ckeditor"  name="titula" id="titula1"></textarea>
+  <span>Unesite Adresa preko editora:</span>
+  <textarea class="ckeditor" name="adresa" id="adresa1"></textarea>
+  <span>Unesite Postanski broj / Grad preko editora:</span>
+  <textarea class="ckeditor" name="grad" id="grad1"></textarea>
+  <span>UnesiteTelefon preko editora:</span>
+  <textarea class="ckeditor" name="telefon" id="telefon1"></textarea>
+  <span>Unesite Mobilni / Fax preko editora:</span>
+  <textarea class="ckeditor" name="mobilni" id="mobilni1"></textarea>
+  <span>Izaberi logo(sliku neku:.png,.jpg):</span><input type="file" id= "logo" onchange="loadFile()">
+  <br>
+  <br>
+  <button type="button" id="download" onclick="toPDF()">Download in .pdf</button>
+  <button type="button" id="download1" onclick="toJPG()">Download in .jpg</button>
+</form>
+<div style="width:725px; height:420px; border:dashed 1px; position: absolute;top: 20px; left: 650px; background-color: white" id="g1" class=".g1">
+<div style="width:685px; height:380px;  position: absolute;top: 0px; left: 0px; background-color: silver; padding:20px" id="glavni" class=".glava">
+<br>
+<span id="tekst" style= "z-index:5;">Vas Tekst ide ovde</span>
+<br><br>
+<span id="slogan" style= "z-index:5;" >Slogan / Opis</span>
+<br><br>
+<span id="ime" style= "z-index:5;">Ime i Prezime</span>
+<br><br>
+<span id="titula" style= "z-index:5;">Titula / Zvanje</span>
+<br><br>
+<span id="adresa" style= "z-index:5;">Adresa</span>
+<br><br>
+<span id="postanski" style= "z-index:5;">Postanski broj / Grad</span>
+<br><br>
+<span id="telefon" style= "z-index:5;">Telefon</span>
+<br><br>
+<span id="mobilni" style= "z-index:5;">Mobilni / Fax</span>
+<br><br>
+<img id="logoslika" src="" height="200" width="200" alt="Vas logo..." style="border:solid 1px #999ea8;position: absolute;left:480px;bottom:175px;z-index:1;">
+</div></div> 
+<script src="scripts/main.js"></script>
+<script src="scripts/load.js"></script>
+</body>
+</html>
